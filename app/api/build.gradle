@@ -1,0 +1,35 @@
+project(':app:api') {
+
+    jar { enabled = false }
+    bootJar { enabled = true }
+
+    dependencies {
+        // project
+        implementation project(':common:constant')
+        implementation project(':common:response')
+        implementation project(':domain')
+        implementation project(':storage:rdb')
+        implementation project(':support:auth')
+
+        // spring dependencies
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter-validation'
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        implementation 'org.springframework.boot:spring-boot-starter-security'
+
+        // api docs
+        implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.9'
+
+        runtimeOnly 'com.h2database:h2'
+
+        testImplementation 'org.springframework.security:spring-security-test'
+        testImplementation platform('org.junit:junit-bom:5.10.0')
+        testImplementation 'org.junit.jupiter:junit-jupiter'
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    }
+}
+
+springBoot {
+    mainClass = 'com.barogo.delivery.api.ApiApplication'
+}
+
