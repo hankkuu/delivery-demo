@@ -131,9 +131,6 @@ JAVA (Spring Boot) 프로젝트로 구현해 주세요.
   - Optimistic Lock: @Version + 예외 처리
   - 분산 Lock: Redis
 
-### 회원의 배달 리스트 캐싱 
-- 자주 조회되는 회원의 배달 리스트는 Redis에 캐싱하여 빠른 응답 제공
-
 ---
 
 ### 회고
