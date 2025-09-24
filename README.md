@@ -190,7 +190,7 @@ JAVA (Spring Boot) 프로젝트로 구현해 주세요.
     - 헬스 체크 및 tracing, apm 과 관련된 설정이 grafana / prometheus / logging 등 다양하게 포함된다.
 
 --- 
-## Dependency Management ()
+## Dependency Management 
 - gradle.properties 에서 버전을 관리한다.
 - build.gradle.kts 에서 모듈간 의존성을 관리한다.
 - settings.gradle.kts 에서 모듈을 관리한다.
